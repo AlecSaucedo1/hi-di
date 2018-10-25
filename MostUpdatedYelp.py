@@ -6,7 +6,7 @@ import json
 
 endpoint = 'https://api.yelp.com/v3/businesses/search'
 endpoint2 = 'https://api.yelp.com/v3/businesses/'
-yp_id = 'uaGdzNm1BKEOqMewnreQANqQA3zfzFK6w1SFbSl2NvMUBRg0ZGsdn1cweOEJf-w_U1anl96Li5YMSKbyrFPLsYl7gOKnsIv6YVJ2rmCtf_rsY8SbU6uU5AhLR-VgW3Yx'
+yp_id = ##
 headers = {'Authorization': 'bearer ' + yp_id}
 params = {'location': '94110', 'categories': 'bars', 'limit': '50'}
 
@@ -70,7 +70,7 @@ while y < len(r['businesses']) + 1:
                 '</p', '').replace('itemprop="description"', '')
             reviewSentiment4 = text4
         x += 1
-    massReview = reviewSentiment1 + ' ' + reviewSentiment2 + ' ' + reviewSentiment3 + ' ' + reviewSentiment4
+    massReview = reviewSentiment1 , reviewSentiment2 , reviewSentiment3 , reviewSentiment4
     massReview = TextBlob(massReview)
     counter = 0
     for s in massReview.sentences:
