@@ -27,7 +27,7 @@ def getMyLocation():
 
 def makeAPICall(category,mylatitude,mylongtitude,sort_by='',offset=''):
   endpoint = 'https://api.yelp.com/v3/businesses/search'
-  yp_id ='uaGdzNm1BKEOqMewnreQANqQA3zfzFK6w1SFbSl2NvMUBRg0ZGsdn1cweOEJf-w_U1anl96Li5YMSKbyrFPLsYl7gOKnsIv6YVJ2rmCtf_rsY8SbU6uU5AhLR-VgW3Yx'
+  yp_id = ##
   headers = {'Authorization': 'bearer ' + yp_id}
   params = {'latitude':mylatitude,'longitude':mylongtitude,'categories':category,'limit':'50','sort_by':sort_by,'offset':offset}
   r = requests.get(endpoint, headers=headers, params=params)
