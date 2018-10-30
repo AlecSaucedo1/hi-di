@@ -57,9 +57,8 @@ def rateReviews(r,y=0):
           massText = text + text2 + text3
           createAlias(alias,massText)
 
-mylatitude = getMyLocation()
-mylatitude = str(mylatitude[0])
-mylongitude = getMyLocation()
-mylongitude = str(mylongitude[1])
+local = getMyLocation()
+mylatitude = str(local[0])
+mylongitude = str(local[1])
 r = makeAPICall('bars',mylatitude,mylongitude,'distance',50)
 rateReviews(r)
